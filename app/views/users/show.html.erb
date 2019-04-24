@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Stripe:</strong>
+  <%= @user.stripe_id %>
+</p>
+
+<p>
+  <strong>Stripe subscription:</strong>
+  <%= @user.stripe_subscription_id %>
+</p>
+
+<p>
+  <strong>Card last4:</strong>
+  <%= @user.card_last4 %>
+</p>
+
+<p>
+  <strong>Card exp month:</strong>
+  <%= @user.card_exp_month %>
+</p>
+
+<p>
+  <strong>Card exp year:</strong>
+  <%= @user.card_exp_year %>
+</p>
+
+<p>
+  <strong>Card type:</strong>
+  <%= @user.card_type %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @user.admin %>
+</p>
+
+<p>
+  <strong>Subscr:</strong>
+  <%= @user.subscr %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

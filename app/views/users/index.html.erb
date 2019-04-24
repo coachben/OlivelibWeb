@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Stripe</th>
+      <th>Stripe subscription</th>
+      <th>Card last4</th>
+      <th>Card exp month</th>
+      <th>Card exp year</th>
+      <th>Card type</th>
+      <th>Admin</th>
+      <th>Subscr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+        <td><%= user.stripe_id %></td>
+        <td><%= user.stripe_subscription_id %></td>
+        <td><%= user.card_last4 %></td>
+        <td><%= user.card_exp_month %></td>
+        <td><%= user.card_exp_year %></td>
+        <td><%= user.card_type %></td>
+        <td><%= user.admin %></td>
+        <td><%= user.subscr %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
